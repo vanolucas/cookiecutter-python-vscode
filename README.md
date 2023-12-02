@@ -1,11 +1,22 @@
 # `cookiecutter-python-vscode`
 
-A cookiecutter to generate sample VSCode dev container Python projects.
+Cookiecutter template for a sample VSCode dev container Python project.
+
+This also provides a Docker image to easily run the cookiecutter project generation tool.
 
 # Usage
 
-To generate a new Python project:
+To generate a new Python project, navigate to this folder, then:
 ```bash
-pipx run cookiecutter gh:vanolucas/cookiecutter-python-vscode
+./generate_project.sh
 ```
 
+This will create then run a `cookiecutter-python-vscode` Docker image.
+
+You will be prompted to provide a project name, etc.
+
+The desired project folder gets created in the current directory.
+
+# Clean up
+
+You can delete the cookiecutter project generation Docker image with: `docker image rm cookiecutter-python-vscode`.
