@@ -1,0 +1,23 @@
+{
+    // Text editor
+    "editor.rulers": [
+        80
+    ],
+    "files.eol": "\n",
+    // Python interpreter
+    "python.defaultInterpreterPath": "/usr/local/bin/python",
+    // Code formatting
+    "[python]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    // Code analysis
+    "python.analysis.ignore": [],
+    // Unit tests
+    "python.testing.unittestEnabled": true,
+    "python.testing.unittestArgs": [
+        "-v", // verbose
+        "-f" // fail fast: stop on first error
+    ],
+}

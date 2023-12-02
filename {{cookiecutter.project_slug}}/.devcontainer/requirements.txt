@@ -1,0 +1,17 @@
+#
+# Python dependencies to install in the dev container only
+#
+
+# Python code analysis
+black
+flake8
+isort
+mypy
+
+# Jupyter notebooks
+ipykernel
+jupyter
+
+# Type stubs (provide type information for untyped modules)
+pandas-stubs
+types-requests
