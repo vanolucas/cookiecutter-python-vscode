@@ -22,7 +22,7 @@ USER vscode
 COPY requirements.txt /tmp/pip-tmp/
 COPY .devcontainer/requirements.txt /tmp/pip-tmp/requirements-dev.txt
 ENV PATH="${PATH}:/home/vscode/.local/bin"
-RUN pip --disable-pip-version-check --no-cache-dir install --upgrade pip \
-    && pip --no-cache-dir install --upgrade -r /tmp/pip-tmp/requirements.txt -r /tmp/pip-tmp/requirements-dev.txt
+RUN pip --disable-pip-version-check install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir --upgrade -r /tmp/pip-tmp/requirements.txt -r /tmp/pip-tmp/requirements-dev.txt
 USER root
 RUN rm -rf /tmp/pip-tmp

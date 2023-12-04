@@ -1,0 +1,27 @@
+{
+    "name": "Cookiecutter Python VSCode",
+    // Docker Compose dev project setup
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dev",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    // Ports to forward locally
+    "forwardPorts": [
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // Python development and code analysis
+                "matangover.mypy",
+                "ms-python.black-formatter",
+                "ms-python.flake8",
+                "ms-python.isort",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                // Jupyter notebooks
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}

@@ -1,0 +1,17 @@
+{
+    // Text editor
+    "editor.rulers": [
+        80
+    ],
+    "files.eol": "\n",
+    // Python interpreter
+    "python.defaultInterpreterPath": "/usr/local/bin/python",
+    // Code formatting
+    "[python]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    // Code analysis
+    "python.analysis.ignore": [],
+}

@@ -25,6 +25,12 @@ Clean up (optional): you can delete the cookiecutter project generation Docker i
 
 ## Using Cookiecutter directly
 
+Download directly from Github:
 ```bash
 pipx run cookiecutter gh:vanolucas/cookiecutter-python-vscode
+```
+
+Or run in your local clone of this repo:
+```bash
+pipx run cookiecutter .
 ```
