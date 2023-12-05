@@ -1,5 +1,5 @@
 # Dev environment variables
-{{ "/.env" }}
+{{ ".env" }}
 
 # Python
 __pycache__
