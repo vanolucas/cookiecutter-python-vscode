@@ -9,12 +9,24 @@ FROM mcr.microsoft.com/devcontainers/python:${IMAGE_VARIANT}
 # For real-time Python writes to stdout
 ENV PYTHONUNBUFFERED 1
 
-# Install pipx
+# Upgrade and install Debian packages
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get -y install --no-install-recommends \
+    iputils-ping \
+    && apt-get autoremove -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/*
+ENV DEBIAN_FRONTEND=dialog
+
+# Install Python libraries
 USER vscode
+COPY requirements.txt /tmp/pip-tmp/
+COPY .devcontainer/requirements.txt /tmp/pip-tmp/requirements-dev.txt
 ENV PATH="${PATH}:/home/vscode/.local/bin"
-RUN pip --disable-pip-version-check --no-cache-dir install --upgrade pip \
-    && pip --no-cache-dir install --user --upgrade \
-    pipx
+RUN pip --disable-pip-version-check install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir --upgrade -r /tmp/pip-tmp/requirements.txt -r /tmp/pip-tmp/requirements-dev.txt
 USER root
 RUN rm -rf /tmp/pip-tmp
 

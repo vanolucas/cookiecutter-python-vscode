@@ -9,7 +9,7 @@
 
 # Setup
 
-A `.env` file must exist in this root directory.
+A `.env` file must exist in this root directory and in `.devcontainer/`.
 This file must contain all the environment variables needed to run the project locally.
 
 [.env-sample](.env-sample) is a sample `.env` file.

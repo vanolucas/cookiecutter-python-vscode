@@ -9,15 +9,18 @@ FROM mcr.microsoft.com/devcontainers/python:${IMAGE_VARIANT}
 # For real-time Python writes to stdout
 ENV PYTHONUNBUFFERED 1
 
-# Optional: install Debian packages
+# Upgrade and install Debian packages
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
-    && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get upgrade -y \
     && apt-get -y install --no-install-recommends \
     iputils-ping \
-    && apt-get clean \
+    && apt-get autoremove -y \
+    && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
+ENV DEBIAN_FRONTEND=dialog
 
-# Optional: if Python requirements rarely change, add them to the image
+# Install Python libraries
 USER vscode
 COPY requirements.txt /tmp/pip-tmp/
 COPY .devcontainer/requirements.txt /tmp/pip-tmp/requirements-dev.txt
