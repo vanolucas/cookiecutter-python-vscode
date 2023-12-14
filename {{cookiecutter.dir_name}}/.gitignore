@@ -1,6 +1,7 @@
-# Dev environment variables
+# Environment variables
 {{ ".env" }}
 
 # Python
 __pycache__
 *.pyc
+.venv

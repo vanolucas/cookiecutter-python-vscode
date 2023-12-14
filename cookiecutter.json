@@ -1,7 +1,7 @@
 {
     "project_name": "Python Project",
     "dir_name": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-').replace(',', '-').replace('.', '') }}",
-    "project_short_description": "A sample Python VSCode Docker Compose dev container project with:\n- FastAPI\n- Jupyter\n- PostgreSQL\n- Adminer\n- OpenAI\n- Binance",
+    "project_short_description": "A sample Python VSCode Docker Compose dev container project with:\n- FastAPI\n- Jupyter\n- PostgreSQL\n- Adminer",
     "postgresql_db_name": "db",
     "postgresql_db_user": "{{ cookiecutter.postgresql_db_name }}",
     "postgresql_db_password": "{{ cookiecutter.postgresql_db_user }}",

@@ -27,6 +27,11 @@
                 "ms-python.vscode-pylance",
                 // Jupyter notebooks
                 "ms-toolsai.jupyter",
+                // Markdown
+                "yzhang.markdown-all-in-one",
+                // Mermaid
+                "bierner.markdown-mermaid",
+                "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
                 // CSV coloring
                 "mechatroner.rainbow-csv"
             ]
