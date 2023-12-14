@@ -18,10 +18,10 @@
                 "ms-python.isort",
                 "ms-python.python",
                 "ms-python.vscode-pylance",
-                // Markdown
-                "yzhang.markdown-all-in-one",
                 // Jupyter notebooks
-                "ms-toolsai.jupyter"
+                "ms-toolsai.jupyter",
+                // Markdown
+                "yzhang.markdown-all-in-one"
             ]
         }
     },
