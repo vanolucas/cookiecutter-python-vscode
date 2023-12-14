@@ -1,13 +1,2 @@
-# FastAPI server
 fastapi
 uvicorn[standard]
-
-# Data manipulation
-# duckdb
-# pandas
-# polars
-
-# Other
-openai
-python-binance
-requests

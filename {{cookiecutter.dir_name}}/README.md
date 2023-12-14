@@ -24,10 +24,9 @@ After the build, you may need to close then reopen the VSCode container for the 
 
 # Run debug
 
-`F5` runs a configuration from the [.vscode/launch.json](.vscode/launch.json) file.
+Go to VSCode's `Run and Debug` tab to select what you want to launch. The listed configurations come from the [.vscode/launch.json](.vscode/launch.json) file.
 
-- `F5` runs the FastAPI application.
-- When text editor is on a `.py` file, `F5` executes that Python file.
+`F5` runs the selected configuration.
 
 # Run unit tests
 

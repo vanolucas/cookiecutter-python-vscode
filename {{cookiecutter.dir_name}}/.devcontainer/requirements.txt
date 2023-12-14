@@ -12,6 +12,8 @@ mypy
 ipykernel
 jupyter
 
+# HTTP client
+requests
+
 # Type stubs (provide type information for untyped modules)
-pandas-stubs
 types-requests
