@@ -3,10 +3,11 @@ import re
 import sys
 
 
-MODULE_NAME_REGEX = r'^[_a-zA-Z][_a-zA-Z0-9]+$'
-
-module_name = "{{ cookiecutter.project_slug }}"
-
-if not re.match(MODULE_NAME_REGEX, module_name):
-    logging.error(f"The project slug `{module_name}` is not a valid Python module name.")
-    sys.exit(1)
+def validate_module_name(cookiecutter_var_name: str, value: str) -> None:
+    MODULE_NAME_REGEX = r'^[_a-zA-Z][_a-zA-Z0-9]+$'
+    if not re.match(MODULE_NAME_REGEX, value):
+        logging.error(
+            f"`{value}` is not a valid Python module name for "
+            f"cookiecutter variable `{cookiecutter_var_name}`."
+        )
+        sys.exit(1)
