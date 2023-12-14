@@ -2,19 +2,17 @@
 
 {{ cookiecutter.project_short_description }}
 
-# Requirements
+# Run dev environment
 
-- Docker and Docker Compose (also requires WSL2 on Windows)
-- [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) VSCode extension
+## Requirements
 
-# Setup
+- VSCode with the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- If on Linux:
+  - `docker` and `docker-compose`
+- If on Windows:
+  - WSL2 and Docker Desktop
 
-A `.env` file must exist in this root directory and in `.devcontainer/`.
-This file must contain all the environment variables needed to run the project locally.
-
-[.env-sample](.env-sample) is a sample `.env` file.
-
-# Run
+## Run VSCode dev container
 
 First, open this folder in VSCode.
 
@@ -22,9 +20,14 @@ Then, reopen the project in a dev container by running one of these VSCode comma
 - `Dev Containers: Rebuild and Reopen in Container`: to build the dev container for the first time or rebuild it.
 - `Dev Containers: Reopen in Container`: to open an existing container.
 
+After the build, you may need to close then reopen the VSCode container for the Python code analysis tools to start up correctly.
+
 # Run debug
 
 `F5` runs a configuration from the [.vscode/launch.json](.vscode/launch.json) file.
+
+- `F5` runs the FastAPI application.
+- When text editor is on a `.py` file, `F5` executes that Python file.
 
 # Run unit tests
 

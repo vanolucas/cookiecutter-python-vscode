@@ -27,6 +27,8 @@
                 "ms-python.vscode-pylance",
                 // Jupyter notebooks
                 "ms-toolsai.jupyter",
+                // Markdown
+                "yzhang.markdown-all-in-one",
                 // CSV coloring
                 "mechatroner.rainbow-csv"
             ]

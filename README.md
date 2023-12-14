@@ -21,7 +21,7 @@ You will be prompted to provide a project name, etc.
 
 The desired project folder gets created in the current directory.
 
-Clean up (optional): you can delete the cookiecutter project generation Docker image with: `docker image rm cookiecutter-python-vscode`.
+Clean up after you generated your project with `generate_project.sh` (optional): you can delete the cookiecutter project generation Docker image with: `docker image rm cookiecutter-python-vscode`.
 
 ## Using Cookiecutter directly
 
