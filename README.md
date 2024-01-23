@@ -23,7 +23,9 @@ The desired project folder gets created in the current directory.
 
 Clean up after you generated your project with `generate_project.sh` (optional): you can delete the cookiecutter project generation Docker image with: `docker image rm cookiecutter-python-vscode`.
 
-## Option 2: Using Cookiecutter directly
+## Option 2: Using Cookiecutter directly in your Python env
+
+This requires [`pipx`](https://pypi.org/project/pipx/).
 
 Download directly from Github:
 ```bash
